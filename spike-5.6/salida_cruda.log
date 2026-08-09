@@ -1,0 +1,20 @@
+TIMESTAMP Y ENTORNO:
+2026-08-09T16:00:07.046418 MiWiFi-R4AC-srv Linux-7.1.7-100.fc43.x86_64-x86_64-with-glibc2.42
+-----------------------------------------------------------------
+=== BATERÍA DE 7 CASOS DE SEGURIDAD Y AUTORIZACIÓN ===
+Caso de Prueba                      | Sesión (Stateful)  | JWT (Stateless)   
+-----------------------------------------------------------------------------
+1. Sin Credencial                   | HTTP 401           | HTTP 401          
+2. Credencial Válida (Usuario)      | HTTP 200           | HTTP 200          
+3. Acceso a Recurso Admin (RBAC)    | HTTP 403           | HTTP 403          
+4. Token Firmado Manipulado         | HTTP 401           | HTTP 401          
+5. Token Firmado Expirado           | HTTP 401           | HTTP 401          
+
+--- CASO 6: MEDICIÓN DE TIEMPO DE REVOCACIÓN TRAS LOGOUT ---
+Sesión tras Logout: HTTP 401 (Revocación Instantánea: 0 segundos)
+JWT Stateless tras Logout: HTTP 200 (Token SIGUE VÁLIDO hasta su expiración)
+JWT con Blacklist tras Logout: HTTP 401 (Requiere estado en servidor para revocar)
+
+--- CASO 7: VECTOR DE ALMACENAMIENTO EN CLIENTE (XSS vs CSRF) ---
+  - JWT en localStorage: Vulnerable a lecturas exfiltradas por XSS (script inyectado).
+  - Sesión / JWT en Cookie HttpOnly + SameSite=Strict: Protegido contra XSS, requiere anti-CSRF token.
