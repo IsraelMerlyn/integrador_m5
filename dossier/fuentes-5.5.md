@@ -1,0 +1,4 @@
+# Fuentes Lección 5.5
+
+- Django REST Framework Authors. (2024). DRF Serializers – Nested Relationships & Performance. https://www.django-rest-framework.org/api-guide/serializers/#nested-relationships (Consulta: 2026-08-09). Aportó las advertencias sobre el comportamiento diferido (lazy evaluation) y la generación implícita de N+1 queries.
+- Django Software Foundation. (2024). Database Access Optimization – select_related and prefetch_related. https://docs.djangoproject.com/en/5.0/topics/db/optimization/#select-related (Consulta: 2026-08-09). Aportó la diferenciación técnica entre `JOIN` SQL (`select_related`) y consultas multitabla paralelas en Python (`prefetch_related`).
