@@ -1,0 +1,8 @@
+TIMESTAMP Y ENTORNO:
+2026-08-09T15:54:23.614209 MiWiFi-R4AC-srv Linux-7.1.7-100.fc43.x86_64-x86_64-with-glibc2.42
+-----------------------------------------------------------------
+
+=== ESTRATEGIA 1: Migración Directa de 1 Paso (Destructiva) ===
+[E1 - Antes de Migrar] Total Filas: 500 | Con Dato Original: 450 | Con Dato Mapeado Nuevo: 0
+>> Ejecutando: DROP COLUMN solicitante_completo y ADD COLUMN nombre, apellido...
+>> Migración aplicada.
