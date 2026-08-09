@@ -1,0 +1,15 @@
+TIMESTAMP Y ENTORNO:
+2026-08-09T15:55:59.229848 MiWiFi-R4AC-srv Linux-7.1.7-100.fc43.x86_64-x86_64-with-glibc2.42
+-----------------------------------------------------------------
+[Escenario A - N+1 Sin Optimizar]
+  Consultas SQL ejecutadas: 501
+  Tamaño de la respuesta JSON: 73,642 bytes
+
+[Escenario B - Optimizado con JOIN / select_related]
+  Consultas SQL ejecutadas: 1
+  Tamaño de la respuesta JSON: 73,642 bytes
+
+[Escenario C - Optimizado + Paginado (page_size=20)]
+  Consultas SQL ejecutadas: 2
+  Tamaño de la respuesta JSON: 3,009 bytes
+
