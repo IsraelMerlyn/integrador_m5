@@ -1,0 +1,4 @@
+# Fuentes Lección 5.6
+
+- Internet Engineering Task Force (IETF). (2015). RFC 7519 – JSON Web Token (JWT). https://datatracker.ietf.org/doc/html/rfc7519 (Consulta: 2026-08-09). Aportó la especificación técnica de la estructura de claims (`exp`, `sub`, `iat`) y verificación de firma digital.
+- OWASP Foundation. (2024). Session Management Cheat Sheet & REST Security. https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html (Consulta: 2026-08-09). Aportó los estándares de seguridad para mitigación de ataques XSS mediante flag `HttpOnly` y diferenciación de respuestas HTTP 401 vs 403.
