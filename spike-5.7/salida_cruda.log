@@ -1,0 +1,25 @@
+TIMESTAMP Y ENTORNO:
+2026-08-09T17:25:36.776653 MiWiFi-R4AC-srv Linux-7.1.7-100.fc43.x86_64-x86_64-with-glibc2.42
+-----------------------------------------------------------------
+=== EVALUACIÓN DE SUITE DE PRUEBAS MEDIANTE INYECCIÓN DE FALLOS ===
+Fallo Inyectado                          | Atrapado Unitarias | Atrapado Integración
+----------------------------------------------------------------------------------
+1. Bypass de validación (días <= 0)      | SÍ                 | SÍ                
+2. Falla de RBAC (acceso a otro usuario) | NO                 | SÍ                
+3. Cálculo erróneo de devolución         | SÍ                 | SÍ                
+4. Filtro roto (devuelve todo)           | NO                 | SÍ                
+5. Estado HTTP 200 en lugar de 400       | NO                 | SÍ                
+----------------------------------------------------------------------------------
+TOTAL FALLOS ATRAPADOS: Unitarias = 2/5 (40%) | Integración = 5/5 (100%)
+
+--- EJECUTANDO COBERTURA DE CÓDIGO CON PYTEST-COV ---
+......                                                                   [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.13-final-0 _______________
+
+Name                     Stmts   Miss  Cover   Missing
+------------------------------------------------------
+spike-5.7/app_logic.py      38     16    58%   1-2, 6, 9-11, 14, 19, 22, 25, 28, 31, 35, 38, 42, 47
+------------------------------------------------------
+TOTAL                       38     16    58%
+6 passed in 0.06s
