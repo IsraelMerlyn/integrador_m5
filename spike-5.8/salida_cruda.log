@@ -1,0 +1,22 @@
+decef623677c4424806066cc670356819ba8ac23b6ca1f5e320e62d42d611ff7
+TIMESTAMP Y ENTORNO:
+2026-08-09T17:36:58.938790 MiWiFi-R4AC-srv Linux-7.1.7-100.fc43.x86_64-x86_64-with-glibc2.42
+-----------------------------------------------------------------
+=== MEDICIÓN Y COMPARACIÓN DE IMÁGENES DOCKER ===
+
+>> [1/4] Compilando Opción A (Single-Stage `python:3.12`)...
+Nota: Descargando imagen base (puede tomar 1-2 min la primera vez)...
+
+>> [2/4] Compilando Opción B (Multi-Stage `python:3.12-slim`)...
+
+>> [3/4] Calculando tamaños finales de imágenes...
+
+=================================================================
+RESULTADOS DE COMPILACIÓN DE IMÁGENES:
+  Opción A (Single-Stage): Tamaño = 398.27 MB | Tiempo Build = 287.84s
+  Opción B (Multi-Stage):  Tamaño = 44.39 MB | Tiempo Build = 1555.93s
+=================================================================
+
+>> [4/4] Probando arranque en frío y variables de entorno de Opción B...
+Respuesta Healthcheck HTTP: 
+Tiempo de Arranque en Frío: 2.39 segundos
